@@ -1,18 +1,504 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/ColorPrimaryDark"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:background="@color/ColorPrimaryDark"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="5dp"
+        android:elevation="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/ColorPrimaryDark"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/globalstates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="GLOBAL STATES"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold">
+
+            </TextView>
+            <View
+                android:id="@+id/view1"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/globalstates"
+                >
+
+            </View>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/linear1"
+                android:layout_below="@id/view1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cases : "
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="start"/>
+
+                <TextView
+
+                    android:id="@+id/tvcase"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="123456"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="end"/>
+
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/linear1"
+                >
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear2"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/view2">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Today`s Cases : "
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="start"/>
+
+                <TextView
+
+                    android:id="@+id/tvTodaysCases"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="123456"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="end"/>
+
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view3"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/linear2"
+                >
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear3"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/view3">
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Deaths : "
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="start"/>
+
+                <TextView
+
+                    android:id="@+id/tvDeaths"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="123456"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="end"/>
+
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view4"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/linear3"
+                >
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear4"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/view4">
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Today`s Cases : "
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="start"/>
+
+                <TextView
+
+                    android:id="@+id/tvTodaysDeaths"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="123456"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="end"/>
+
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view5"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/linear4"
+                >
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear5"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/view5">
+
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Recovered : "
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="start"/>
+
+                <TextView
+
+                    android:id="@+id/tvRecovered"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="123456"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="end"/>
+
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view6"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/linear5"
+                >
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear6"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/view6">
+
+                <TextView
+                    android:id="@+id/tv6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Active : "
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="start"/>
+
+                <TextView
+
+                    android:id="@+id/tvActive"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="123456"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="end"/>
+
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view7"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/linear6"
+                >
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear7"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/view7">
+
+                <TextView
+                    android:id="@+id/tv7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Critical : "
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="start"/>
+
+                <TextView
+
+                    android:id="@+id/tvCritical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="123456"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="end"/>
+
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view8"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/linear7"
+                >
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear8"
+                android:orientation="horizontal"
+                android:layout_marginTop="20sp"
+                android:layout_below="@id/view8">
+
+                <TextView
+                    android:id="@+id/tv8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Effected Countries : "
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="start"/>
+
+                <TextView
+
+                    android:id="@+id/tvEffectedCountries"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="123456"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="end"/>
+
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view9"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/linear8"
+                >
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear9"
+                android:orientation="horizontal"
+                android:layout_marginTop="20sp"
+                android:layout_below="@id/view8">
+
+                <ImageView
+                    android:layout_marginTop="70dp"
+                    android:layout_below="@+id/view9"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/virus">
+
+                </ImageView>
+                <ImageView
+                    android:layout_marginTop="70dp"
+                    android:layout_below="@+id/view9"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/virus">
+
+                </ImageView>
+                <ImageView
+                android:layout_marginTop="70dp"
+                android:layout_below="@+id/view9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/virus">
+
+            </ImageView>
+                <ImageView
+                android:layout_marginTop="70dp"
+                android:layout_below="@+id/view9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/virus">
+
+            </ImageView>
+                <ImageView
+                android:layout_marginTop="70dp"
+                android:layout_below="@+id/view9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/virus">
+
+            </ImageView>
+                <ImageView
+                android:layout_marginTop="70dp"
+                android:layout_below="@+id/view9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/virus">
+
+            </ImageView>
+                <ImageView
+                android:layout_marginTop="70dp"
+                android:layout_below="@+id/view9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/virus">
+
+            </ImageView>
+                <ImageView
+                android:layout_marginTop="70dp"
+                android:layout_below="@+id/view9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/virus">
+
+            </ImageView>
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:layout_below="@id/linear9"
+                android:text="Version : 1.0"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
